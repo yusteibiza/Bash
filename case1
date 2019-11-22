@@ -1,0 +1,14 @@
+#!/bin/bash
+
+while true
+do
+    read -p "¿Terminar este programa chorra? (S/N) .: " opt
+    case $opt in
+	["S,s"]*)
+	    echo -e "\n¡¡¡Adios!!!\n"
+	    exit
+	;;
+	*)
+	;;
+    esac
+done

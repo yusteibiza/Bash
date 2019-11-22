@@ -1,0 +1,24 @@
+#! /bin/bash
+
+export PATH=$PATH:/yuste/bin:/usr/sbin:/usr/bin
+export QT_QPA_PLATFORMTHEME=qt5ct
+COWSAY=$(which cowsay | cut -d" " -f2)
+
+alias l='ls -lhaF --color'
+alias ver='uname -a | cut -d " " -f1,3,13,15'
+alias cls='clear'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias chkdsk='e2fsck'
+alias del='rm'
+alias erase='rm'
+alias deltree='rm -r'
+
+[[ -f "$COWSAY" ]] && $COWSAY "¡¡¡ Hola, $USER !!!" && echo -e "\n" || echo -e "\n!!! Hola, $USER !!!\n"
+
+for i in /dev/ttyS{1..9}
+do
+    setfont -C $i Uni3-TerminusBold22x11.psf.gz 2> /dev/null
+done
+
+setfont Uni3-TerminusBold22x11.psf.gz > /dev/null 2> /dev/null
