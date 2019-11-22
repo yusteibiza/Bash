@@ -1,0 +1,4 @@
+#!/bin/bash
+
+snap run spotify &
+

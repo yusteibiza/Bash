@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while (true)
+do
+    clear 
+    echo -e "\n Temperatura CPU " 
+    #sensors | tail -n 5 | head -n 1 | cut -b 10-22
+    /yuste/bin/infoprocesador
+    echo -e "\n"
+    sensors | grep "Core"
+    echo -e "\n"
+    sleep 1
+done
